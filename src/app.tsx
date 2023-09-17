@@ -1,13 +1,18 @@
 import React, { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 
-import HelloWorld from './component/HelloWorld'
+import { GlobalStyle } from './global-styles'
+import { DataProvider } from '@context/dataContext'
+import { MainPage } from '@pages/index'
 
 const container = document.getElementById('root') as HTMLElement
 
 const initialChildren = (
   <StrictMode>
-    <HelloWorld />
+    <DataProvider>
+      <GlobalStyle />
+      <MainPage />
+    </DataProvider>
   </StrictMode>
 )
 
