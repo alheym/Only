@@ -31,6 +31,7 @@ export const Dial = () => {
   }
 
   const circleRadius = circleDiameter / 2
+  const pointOffset = circleRadius - 4 // contour thickness
   const rotation = slide ? slide : 1
 
   return (
@@ -44,7 +45,7 @@ export const Dial = () => {
             <Dot
               key={`dot:${item.id}`}
               id={`dot${item.id}`}
-              style={{ top: `${261 - y}px`, left: `${261 + x}px` }}
+              style={{ top: `${pointOffset - y}px`, left: `${pointOffset + x}px` }}
               rotation={-rotation}
               className={item.id === slide ? 'show' : ''}
               onClick={() => handleClickPoint(item.id)}>

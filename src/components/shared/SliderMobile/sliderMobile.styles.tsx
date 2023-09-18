@@ -3,14 +3,14 @@ import styled from 'styled-components'
 import { SlideItem, Year, Description } from '@components/shared/SliderDesktop/sliderDesktop.styles'
 
 export const Wrapper = styled.div`
-  margin-top: 288px;
+  margin-top: 18rem;
 
   .swiper {
-    margin-bottom: 70px;
+    margin-bottom: 4.375rem;
   }
 
   .swiper-slide {
-    min-width: 166px;
+    min-width: 10.375rem;
   }
 
   .swiper-slide-next {
@@ -21,11 +21,11 @@ export const Wrapper = styled.div`
 export const SlideItemMobile = styled(SlideItem)``
 
 export const YearMobile = styled(Year)`
-  font-size: 16px;
+  font-size: 1rem;
 `
 
 export const DescriptionMobile = styled(Description)`
-  max-height: 80px;
-  font-size: 14px;
+  max-height: 5rem;
+  font-size: 0.875rem;
   line-height: 145%;
 `

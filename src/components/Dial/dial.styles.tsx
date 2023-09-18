@@ -8,12 +8,11 @@ export const Wrapper = styled.div`
     display: none;
   }
 `
-
 export const Circle = styled.div<RotationProps>`
   z-index: 5;
   position: relative;
   margin: 0 auto;
-  top: 215px;
+  top: 13.4375rem;
   width: ${circleDiameter}px;
   height: ${circleDiameter}px;
   border: 1px solid rgba(66, 86, 122, 0.1);
@@ -27,22 +26,22 @@ export const Circle = styled.div<RotationProps>`
 export const Dot = styled.div<DotProps>`
   position: absolute;
   z-index: 15;
-  width: 6px;
-  height: 6px;
+  width: 0.375rem;
+  height: 0.375rem;
   border-radius: 50%;
   background: var(--text);
   overflow: hidden;
   cursor: pointer;
   transform: rotate(${({ rotation }) => -rotation * 60}deg);
-  font-size: 20px;
+  font-size: 1.25rem;
 
   transition: all 0.4s;
 
   span {
     visibility: hidden;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 400;
-    line-height: 30px;
+    line-height: 1.875rem;
   }
 
   &:hover,
@@ -54,17 +53,17 @@ export const Dot = styled.div<DotProps>`
     flex-flow: row nowrap;
     align-items: center;
     justify-content: center;
-    width: 56px;
-    height: 56px;
-    background: #f4f5f9;
+    width: 3.5rem;
+    height: 3.5rem;
+    background: var(--bg);
     border: 1px solid rgba(48, 62, 88, 0.5);
 
-    margin: -26px;
+    margin: -1.625rem;
   }
 `
 export const DotNumber = styled.span`
-  font-size: 20px;
+  font-size: 1.25rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 30px; /* 150% */
+  line-height: 1.875rem; /* 150% */
 `

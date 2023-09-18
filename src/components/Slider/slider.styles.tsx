@@ -4,7 +4,7 @@ export const Wrapper = styled.div`
   width: 100%;
   overflow: hidden;
   z-index: 1;
-  padding: 0 80px;
+  padding: 0 5rem;
 
   .swiper-button-disabled {
     display: none;
@@ -18,40 +18,40 @@ export const Wrapper = styled.div`
   .swiper-button-next {
     margin-top: 0;
     height: 100%;
-    width: 80px;
-    background: #f4f5f9;
+    width: 5rem;
+    background: var(--bg);
     top: 0;
   }
 
   .swiper-button-prev::after,
   .swiper-button-next::after {
     position: absolute;
-    top: 43px;
-    padding: 13px 16.5px;
-    font-size: 14px;
+    top: 2.6875rem;
+    padding: 0.8125rem 1.0313rem;
+    font-size: 0.875rem;
     font-weight: 700;
     border-radius: 50%;
     background: #fff;
-    filter: drop-shadow(0px 0px 15px rgba(56, 119, 238, 0.1));
+    filter: drop-shadow(0 0 0.9375rem rgba(56, 119, 238, 0.1));
   }
 
   .swiper-button-prev::after {
-    left: 20px;
+    left: 1.25rem;
   }
   .swiper-button-next::after {
-    right: 40px;
+    right: 2.5rem;
   }
 
   .swiper-button-prev {
-    left: -80px;
+    left: -5rem;
   }
 
   .swiper-button-next {
-    width: 120px;
-    right: -80px;
+    width: 7.5rem;
+    right: -5rem;
   }
 
   @media (max-width: 768px) {
-    padding: 0 20px;
+    padding: 0 1.25rem;
   }
 `

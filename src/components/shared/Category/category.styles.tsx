@@ -4,15 +4,15 @@ export const CategoryTitle = styled.h2`
   position: absolute;
   right: 27.5rem;
   top: 14.75rem;
-  width: 100px;
+  width: 6.25rem;
   margin: 0;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 700;
-  line-height: 30px;
+  line-height: 1.875rem;
 
   @media (max-width: 768px) {
-    left: 20px;
-    top: 260px;
-    font-size: 14px;
+    left: 1.25rem;
+    top: 16.25rem;
+    font-size: 0.875rem;
   }
 `

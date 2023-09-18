@@ -4,16 +4,16 @@ import { YearProps } from './years.types'
 
 export const Year = styled.span<YearProps>`
   color: ${({ color }) => color};
-  font-size: 200px;
+  font-size: 12.5rem;
   font-weight: 700;
-  line-height: 160px;
-  letter-spacing: -4px;
+  line-height: 10rem;
+  letter-spacing: -0.25rem;
   text-align: center;
 
   @media (max-width: 768px) {
-    font-size: 56px;
+    font-size: 3.5rem;
     line-height: normal;
-    letter-spacing: -1.12px;
+    letter-spacing: -0.07rem;
   }
 `
 export const Wrapper = styled.div`
@@ -21,12 +21,12 @@ export const Wrapper = styled.div`
   position: relative;
   display: flex;
   justify-content: space-between;
-  width: 956px;
-  top: -135px;
+  width: 59.75rem;
+  top: -8.4375rem;
   margin: 0 auto;
 
   @media (max-width: 768px) {
-    top: 165px;
-    width: 273px;
+    top: 10.3125rem;
+    width: 17.0625rem;
   }
 `
