@@ -55,3 +55,24 @@ export const Wrapper = styled.div`
     padding: 0 20px;
   }
 `
+
+export const SlideItem = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+`
+export const Year = styled.p`
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 25px;
+  line-height: 120%; /* 30px */
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--year);
+`
+export const Description = styled.p`
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px; /* 150% */
+  color: var(--text);
+`

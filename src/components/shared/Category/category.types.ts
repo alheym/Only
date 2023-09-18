@@ -1,4 +1,4 @@
-export interface TitleProps {
+export interface CategoryProps {
   slide: number
   category?: string
 }

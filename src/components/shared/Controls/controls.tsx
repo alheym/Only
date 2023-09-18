@@ -29,16 +29,19 @@ export const Controls: FC = () => {
 
   const nextSlide = () => {
     if (slide !== null) {
-      setSlide(Math.min(6, slide + 1))
+      setSlide(Math.min(data.length, slide + 1))
     }
   }
+
+  const activeFirstButton = isFirstSlide.toString()
+  const activeLastButton = isLastSlide.toString()
 
   return (
     <Wrapper>
       {`0${slide}/0${data.length}`}
       <ControlsButton>
-        <ButtonPrev active={isFirstSlide} onClick={prevSlide} />
-        <ButtonNext active={isLastSlide} onClick={nextSlide} />
+        <ButtonPrev active={activeFirstButton} onClick={prevSlide} />
+        <ButtonNext active={activeLastButton} onClick={nextSlide} />
       </ControlsButton>
     </Wrapper>
   )

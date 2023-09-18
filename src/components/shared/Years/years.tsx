@@ -1,4 +1,4 @@
-import { FC, useContext, useRef, useEffect, useState } from 'react'
+import { FC, useContext, useEffect, useState } from 'react'
 import CountUp from 'react-countup'
 
 import { DataContext } from '@context/dataContext'

@@ -8,21 +8,21 @@ export const GlobalStyle = createGlobalStyle`
 
 @font-face {
   font-family:BebasNeueRegular;
-  src: url(BebasNeueRegular);
+  src: url(${BebasNeueRegular});
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: PTSansBold;
-  src: url(PTSansBold);
+  src: url(${PTSansBold});
   font-weight: 700;
   font-style: normal
 }
 
 @font-face {
   font-family: PTSansRegular;
-  src: url(PTSansRegular);
+  src: url(${PTSansRegular});
   font-weight: 400;
   font-style: normal
 }
@@ -30,6 +30,8 @@ export const GlobalStyle = createGlobalStyle`
 :root {
     --bg: #F4F5F9;
     --text: #42567A;
+    --year: #3877EE;
+    --pagination: #adb5c6;
     --iris: #5D5FEF;
     --fuschia: #EF5DA8;
   }
@@ -50,6 +52,7 @@ html,
     font-weight: 700;
     font-style: normal;
     line-height: 120%;
+    overflow: hidden;
   *,
   *::after,
   *::before {

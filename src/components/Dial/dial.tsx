@@ -1,10 +1,10 @@
-import { useContext, useRef, useEffect } from 'react'
+import { useContext } from 'react'
 
 import { DataContext } from '@context/dataContext'
 import { circleDiameter } from '@constants/constants'
 
-import { Title } from '@components/index'
-import { Dot, Circle, DotNumber } from './dial.styles'
+import { Category } from '@components/index'
+import { Dot, Circle, DotNumber, Wrapper } from './dial.styles'
 
 export const Dial = () => {
   const context = useContext(DataContext)
@@ -34,7 +34,7 @@ export const Dial = () => {
   const rotation = slide ? slide : 1
 
   return (
-    <>
+    <Wrapper>
       <Circle rotation={rotation}>
         {data.map((item, index) => {
           const angle = calculateAngle(index, data.length)
@@ -53,7 +53,7 @@ export const Dial = () => {
           )
         })}
       </Circle>
-      <Title slide={slide} />
-    </>
+      <Category slide={slide} />
+    </Wrapper>
   )
 }

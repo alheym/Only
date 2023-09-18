@@ -3,6 +3,12 @@ import { DotProps, RotationProps } from './dial.types'
 
 import { circleDiameter } from '@constants/constants'
 
+export const Wrapper = styled.div`
+  @media (max-width: 768px) {
+    display: none;
+  }
+`
+
 export const Circle = styled.div<RotationProps>`
   z-index: 5;
   position: relative;

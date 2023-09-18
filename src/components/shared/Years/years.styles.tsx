@@ -9,6 +9,12 @@ export const Year = styled.span<YearProps>`
   line-height: 160px;
   letter-spacing: -4px;
   text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 56px;
+    line-height: normal;
+    letter-spacing: -1.12px;
+  }
 `
 export const Wrapper = styled.div`
   z-index: -3;
@@ -18,4 +24,9 @@ export const Wrapper = styled.div`
   width: 956px;
   top: -135px;
   margin: 0 auto;
+
+  @media (max-width: 768px) {
+    top: 165px;
+    width: 273px;
+  }
 `

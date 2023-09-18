@@ -4,10 +4,10 @@ import { gsap } from 'gsap'
 import { DataContext } from '@context/dataContext'
 import { DataItem } from '@mocks/db'
 
-import { TitleProps } from './title.types'
-import { TitleCategory } from './title.styles'
+import { CategoryProps } from './category.types'
+import { CategoryTitle } from './category.styles'
 
-export const Title: FC<TitleProps> = () => {
+export const Category: FC<CategoryProps> = () => {
   const context = useContext(DataContext)
   const ref = useRef(null)
 
@@ -36,5 +36,5 @@ export const Title: FC<TitleProps> = () => {
     animation.play()
   }, [slide])
 
-  return <TitleCategory ref={ref}>{category}</TitleCategory>
+  return <CategoryTitle ref={ref}>{category}</CategoryTitle>
 }

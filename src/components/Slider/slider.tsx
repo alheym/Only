@@ -1,62 +1,12 @@
-import { FC, useContext, useEffect, useRef } from 'react'
-import gsap from 'gsap'
+import { FC } from 'react'
 
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation } from 'swiper'
-import 'swiper/css'
-import 'swiper/css/navigation'
+import { SliderDesktop, SliderMobile } from '@components/index'
+import { mediumScreen } from '@constants/constants'
 
-import { DataContext } from '@context/dataContext'
-import { Controls } from '@components/index'
-
-import { SlideItem, Wrapper, Year, Description } from './slider.styles'
+import { Wrapper } from './slider.styles'
 
 export const Slider: FC = () => {
-  const context = useContext(DataContext)
-  const ref = useRef(null)
+  const isMobile = window.innerWidth < mediumScreen
 
-  if (!context) {
-    return null
-  }
-
-  const { slide, data } = context
-
-  const details = data.find(item => item.id === slide)?.details || []
-
-  useEffect(() => {
-    const animation = gsap.fromTo(
-      ref.current,
-      {
-        opacity: 0,
-      },
-      {
-        opacity: 1,
-        duration: 1.5,
-        delay: 0.3,
-      }
-    )
-
-    animation.kill()
-    animation.restart()
-
-    animation.play()
-  }, [slide])
-
-  return (
-    <Wrapper>
-      <Controls />
-      <div ref={ref}>
-        <Swiper navigation slidesPerView={3} spaceBetween={80} modules={[Navigation]} grabCursor={true}>
-          {details.map(item => (
-            <SwiperSlide key={item.year}>
-              <SlideItem>
-                <Year>{item.year}</Year>
-                <Description>{item.description}</Description>
-              </SlideItem>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
-    </Wrapper>
-  )
+  return <Wrapper>{isMobile ? <SliderMobile /> : <SliderDesktop />}</Wrapper>
 }
